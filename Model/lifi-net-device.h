@@ -34,12 +34,6 @@ namespace ns3 {
 class LiFiChannel;
 class TdmaController;
 class LiFiRegularMac;
-/**
- * \brief Hold together all Tdma-related objects.
- *
- * This class holds together ns3::SimpleWirelessChannel and
- * ns3::TdmaMac
- */
 class LiFiNetDevice : public SimpleNetDevice
 {
 public:
@@ -47,49 +41,33 @@ public:
 
   LiFiNetDevice ();
   virtual ~LiFiNetDevice ();
- //returns the azmuth, i.e. facing of the device
   double GetAzmuth();
 
-  //sets the azmuth,i.e. facing of the device
   void SetAzmuth(double az);
 
-  //returns the x,y,z co-ordinates of the device
   ns3::Vector GetPosition();
 
-  //sets the position of the device to a particular x,y,z value
   void SetPosition(ns3::Vector position);
 
-  //returns the elevation of the device
   double GetElevation();
 
-  //sets the elevation of the device
   void SetElevation(double elevation);
 
-   //returns a pointer to the mobility model of the device
    ns3::Ptr<LiFiMobilityModel> GetMobilityModel();
 
-   //sets the mobility model of the device
    void SetMobilityModel(ns3::Ptr<LiFiMobilityModel> model);
 
    void SetDeviceName (std::string name);
 
-  /**
-   	    * \param mac the mac layer to use.
-   	*/
   void SetMac (Ptr<TdmaMac> mac);
-  	/**
-   	   * \returns the mac we are currently using.
-   	*/
+  	
   Ptr<TdmaMac> GetMac (void) const;
-  /**
-   * \param channel The channel this device is attached to
-   */
+ 
   void SetChannel (Ptr<LiFiChannel> channel);
   void SetTdmaController (Ptr<TdmaController> controller);
   Ptr<TdmaController>  GetTdmaController (void) const;
   virtual Ptr<LiFiChannel> DoGetChannel (void) const;
   virtual Ptr<Channel> GetChannel (void) const;
-  // inherited from NetDevice base class.
   virtual void SetIfIndex (const uint32_t index);
   virtual uint32_t GetIfIndex (void) const;
   virtual void SetAddress (Address address);
