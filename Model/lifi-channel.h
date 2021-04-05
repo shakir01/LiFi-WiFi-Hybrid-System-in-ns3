@@ -48,11 +48,6 @@ struct LiFiUserData
 
 class LiFiPhy;
 
-//class LifiPropagationLossModel;
-/**
- * \ingroup channel
- * \brief A simple channel, for simple things and testing
- */
 class LiFiChannel : public SimpleChannel
 {
 public:
