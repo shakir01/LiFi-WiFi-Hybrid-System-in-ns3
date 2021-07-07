@@ -1,0 +1,11 @@
+Index: src/simple-wireless-tdma/examples/tdmaSlots.txt
+===================================================================
+new file mode 100755
+--- /dev/null
++++ b/src/simple-wireless-tdma/examples/tdmaSlots.txt
+@@ -0,0 +1,4 @@
++3:1,0,0,0
++2:0,1,0,0
++1:0,0,1,0
++0:0,0,0,1
+\ No newline at end of file
