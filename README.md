@@ -22,3 +22,8 @@ Installation:
 6. Direct your machine terminal to ns3 top level director (i.e. your terminal control must be outside the "src" and "scratch" folders).
 7. Build NS3 using tools such as "waf" and "bake".
 8. Your LiFi module is now ready for simulations
+
+Acknowldgments:
+
+1. Hemanth Narra's TDMA in ns3:https://github.com/knud/simple-wireless-tdma.git
+2. Aldalbahias VLC framework in ns3:https://github.com/Aldalbahias/VLC.git
